@@ -7,6 +7,7 @@ import java.util.List;
 
 import javax.servlet.ServletConfig;
 import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -28,9 +29,10 @@ import com.gmail.ivanytskyy.vitaliy.service.LecturerServiceImpl;
 /*
  * Task #3/2015/12/15 (web project #3)
  * InstituteServlet
- * @version 1.01 2015.12.15
+ * @version 1.02 2016.01.02
  * @author Vitaliy Ivanytskyy
  */
+@WebServlet("/views/users/scheduleList")
 public class InstituteServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 	private Logger log = Logger.getLogger(InstituteServlet.class);

@@ -3,6 +3,7 @@ import java.io.IOException;
 
 import javax.servlet.ServletConfig;
 import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -17,9 +18,10 @@ import com.gmail.ivanytskyy.vitaliy.service.SubjectServiceImpl;
 /*
  * Task #3/2015/12/15 (web project #3)
  * SubjectServlet
- * @version 1.01 2015.12.15
+ * @version 1.02 2016.01.02
  * @author Vitaliy Ivanytskyy
  */
+@WebServlet("/views/administrator/subjectResult")
 public class SubjectServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 	private Logger log = Logger.getLogger(SubjectServlet.class);

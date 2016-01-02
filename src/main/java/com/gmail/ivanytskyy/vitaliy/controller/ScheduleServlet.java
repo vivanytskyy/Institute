@@ -4,14 +4,18 @@ import java.util.LinkedList;
 import java.util.Calendar;
 import java.util.GregorianCalendar;
 import java.util.List;
+
 import javax.servlet.ServletConfig;
 import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+
 import org.apache.log4j.Logger;
 import org.springframework.context.ApplicationContext;
 import org.springframework.dao.DataAccessException;
+
 import com.gmail.ivanytskyy.vitaliy.domain.Schedule;
 import com.gmail.ivanytskyy.vitaliy.domain.ScheduleItem;
 import com.gmail.ivanytskyy.vitaliy.service.ScheduleItemService;
@@ -21,9 +25,10 @@ import com.gmail.ivanytskyy.vitaliy.service.ScheduleServiceImpl;
 /*
  * Task #3/2015/12/15 (web project #3)
  * ScheduleServlet
- * @version 1.01 2015.12.15
+ * @version 1.02 2016.01.02
  * @author Vitaliy Ivanytskyy
  */
+@WebServlet("/views/administrator/scheduleResult")
 public class ScheduleServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 	private Logger log = Logger.getLogger(ScheduleServlet.class);

@@ -1,22 +1,27 @@
 package com.gmail.ivanytskyy.vitaliy.controller;
 import java.io.IOException;
+
 import javax.servlet.ServletConfig;
 import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+
 import org.apache.log4j.Logger;
 import org.springframework.context.ApplicationContext;
 import org.springframework.dao.DataAccessException;
+
 import com.gmail.ivanytskyy.vitaliy.domain.Classroom;
 import com.gmail.ivanytskyy.vitaliy.service.ClassroomService;
 import com.gmail.ivanytskyy.vitaliy.service.ClassroomServiceImpl;
 /*
  * Task #3/2015/12/15 (web project #2)
  * ClassroomServlet
- * @version 1.01 2015.12.15
+ * @version 1.02 2016.01.02
  * @author Vitaliy Ivanytskyy
  */
+@WebServlet("/views/administrator/classroomResult")
 public class ClassroomServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 	private Logger log = Logger.getLogger(ClassroomServlet.class);
